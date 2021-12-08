@@ -1,0 +1,39 @@
+*{margin:0; padding:0;}
+.dangky, .dangnhap{
+	width:470px;
+	height:500px;
+	background:#f7f7f7;
+	border:1px solid gray;
+	padding:20px;
+	position:fixed;
+	top:100px;
+	left:50%;
+	transform:translateX(-50%);
+	
+}
+.nutso1,.nutso2 {float: right;}
+input {
+	outline: none;
+  }
+h1{
+	color: #066A75;
+}
+
+
+p{
+	margin-bottom:15px;
+}
+ p:first-child{
+	margin: 0px;
+}
+label{
+	color: rgb(64, 92, 96);
+	position: relative;
+}
+input{
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	
+}
