@@ -1,0 +1,96 @@
+<!-- <div class="container mt-5">
+  <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
+    <fa-icon [icon]="faUser" class="ms-auto me-auto user-icon"></fa-icon>
+
+    <form #f="ngForm" (ngSubmit)="f.form.valid && login()">
+
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!username.valid && f.submitted">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+          Password is required.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100 mt-3" style="background-color: #50A057;">
+        Sign In
+      </button>
+
+    </form>
+
+    <a [routerLink]="['/register']" class="btn btn-link" style="color: darkgray;">
+      Create new account!
+    </a>
+  </div>
+</div> -->
+<div class="dangky">
+   <div id="login" class="animate form">
+    <form #f="ngForm" (ngSubmit)="f.form.valid && login()">
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+      <h1>Log in</h1> 
+      <div> 
+        <div><label for="username" class="uname" data-icon="u" > Your email or username </label></div>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+          class="form-control"
+          required
+        />
+      </div>
+      <div> 
+        <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          class="form-control"
+          required
+        />
+        <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+          Password is required.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success w-100 mt-3" style="background-color: #50A057;">
+        Sign In
+      </button>
+    </form>
+  </div>
+  <a [routerLink]="['/register']" class="btn btn-link" style="color: darkgray;">
+    Create new account!
+  </a>
+</div>
