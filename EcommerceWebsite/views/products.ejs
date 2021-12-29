@@ -1,0 +1,53 @@
+<%- include('partials/header') -%>
+<div class="text-center background-brand pb-5">
+    <h1 class="pt-5">Product</h1>
+    <p class="lead pb-5">Choose your product from the category you like.</p>
+    <form action="">
+        <div class="input-group mx-auto" style="max-width: 35rem;">
+            <input type="text" class="form-control" aria-describedby="basic-addon2" name="brandname">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+<section class="bg-light">
+    <div class="row">
+        <div class="col">
+            <ul class="products">
+                <%items.forEach(function(item){%>
+
+              
+
+                <li>
+                    <div class="product">
+                        <a href="#" sytle="text-decoration: none;">
+                            <img src="/images/image1.jpg" alt="" class="product-image">
+                            <div class="row mt-2">
+                                <div class="cetner-block col">
+                                    <span name="inn" style="text-decoration: none;" class="product-name h6"><%=item.title%></span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="col text-end mx-5 h5 center-block product-price">
+                            <%=item.price%>
+                        </div>
+                        <div class="product-brand">
+                            Brand: <span class="font-weight-bold"><%=item.brand%></span>
+                        </div>
+                        <div class="product-brand">
+                            Category: <span class="font-weight-bold"><%=item.category%></span>
+                            <div class="product-brand">
+                                Size: <span class="font-weight-bold"><%=item.size%></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+       
+    </div>
+</section>
+
+<%- include('partials/footer') -%>

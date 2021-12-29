@@ -1,0 +1,118 @@
+<%- include('partials/header') -%>
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="col-lg-6 bg-light p-3">
+            <form action="">
+                <h3>Add category</h3>
+                <label for="">Category Name</label>
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="name" class="form-control">
+                </div>
+                <label for="">Category Image</label>
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="path" class="form-control">
+                </div>
+                <div>
+                    <button class="btn btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 bg-dark p-3 text-light">
+            <form action="">
+                <h3>Add Brand</h3>
+                <label for="">Brand Name</label>
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="name" class="form-control">
+                </div>
+                <label for="">Brand Image</label>
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="path" class="form-control">
+                </div>
+                <div>
+                    <button class="btn btn-light">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 bg-dark text-light p-3">
+            <form action="">
+                <h3>Add Item</h3>
+
+                <label for="name">Item Name</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Description</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Category</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Brand</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Image</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Quantity</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Price</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <label for="name">Item Size</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="name">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="btn btn-light">Submit</div>
+                    </div>
+                    <div class="col-6 float-start">
+                        <form action="">
+                            <button class="btn btn-light float-end">View All Items</button>
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 scroll">
+            <h1>Orders</h1>
+            <div class="card">
+                <form action="">
+                    <div class="card-header bg-warning text-dark">
+                        Order #1
+                        <p class="card-text float-end">Total Price: $75</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card-title">
+                                    Hadi
+                                </div>
+                                <p class="card-text">
+                                    Lebanon
+                                </p>
+                                <p class="card-text">20/12/2021</p>
+                                <p class="card-text">444-444-4444</p>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-primary">See Full Order</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>

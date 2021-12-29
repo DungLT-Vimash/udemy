@@ -1,0 +1,81 @@
+<%- include('partials/header') -%>
+<form action="">
+    <div class="container-fluid p-5">
+        <div class="row">
+            <div class="col">
+                <div class="card-body bg-light justify-content-center">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="/images/image1.jpg" style="display: inline-block;height: 25rem; width: 25rem;"alt="">
+                            <div class="p-4 text-center">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="button" id="edit" class="btn btn-warning  py-2">Edit</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn p-2 btn-warning py-2 f" disabled type="button" id="nextSubmit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="name">Product Name</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="Johnson" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    <label for="name">Product Description</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="lorem ipsum" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    <label for="name">Product Category</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="shampoo"name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    <label for="name">Product Brand</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="Johnson" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6">
+                                    <label for="name">Product Quantity</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="20" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    
+                                    <label for="name">Product Price</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="$15" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    <label for="name">Product Size</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="200ML" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                    <label for="name">Product Image</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" value="/images" name="name" class="form-control f" id="nextSubmit" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#edit').click(function(){
+            $('.f').removeAttr('disabled');
+        });
+        $('#nextSubmit').click(function(){
+            $('.f').attr("disabled", "disabled");
+        });
+        
+    })
+</script>
+<%- include('partials/footer') -%>

@@ -1,0 +1,44 @@
+<%- include('partials/header') -%>
+<div class="container-fluid">
+    <div class="row py-3">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="row py-3">
+                <div class="progress bg-secondary mb-3">
+                    <div class="progress-bar bg-warning" style="width: 25%;"></div>
+                </div>
+            </div>
+
+            <div class="row pb-5">
+                <div class="col-3">Sign in</div>
+                <div class="col-3">Shipping</div>
+                <div class="col-3">Payment</div>
+                <div class="col-3">Place Order</div>
+            </div>
+
+            <div class="row text-center py-5 text-light">
+                <div class="col-1"></div>
+                <div class="col-10 bg-dark text-start" style="height:28rem;">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="" class="py-3">Full Address</label>
+                            <input type="text" class="form-control" placeholder="village, street and building" name="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="py-3">City</label>
+                            <input type="text" class="form-control" placeholder="Enter your city" name="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="py-3">Phone Number</label>
+                            <input type="text" class="form-control" placeholder="village, street and building" name="address">
+                        </div>
+                        <div class="text-center py-3">
+                            <button class="btn btn-primary text-center">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') -%>

@@ -1,0 +1,51 @@
+<%- include('partials/header') -%>
+<div class="container-fluid">
+    <div class="row py-3">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="row py-3">
+                <div class="progress bg-secondary mb-3">
+                    <div class="progress-bar bg-warning" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="row pb-5">
+                <div class="col-3">Sign in</div>
+                <div class="col-3">Shipping</div>
+                <div class="col-3">Payment</div>
+                <div class="col-3">Place Order</div>
+            </div>
+
+            <div class="row text-center py-5 text-light">
+                <div class="col-2"></div>
+                <div class="text-center">
+                    <form action="">
+                        <div class="card text-white text-center bg-dark mb-3" style="margin: 0; float: none;max-width: 18rem;margin: bottom 10px;">
+                            <div class="card-header">Payment</div>
+                            <div class="card-body">
+                                <div class="form-check text-start py-3">
+                                    <input type="checkbox" onclick="return termsChanged(this)" id="exampleCheck" class="form-check-control">
+                                    <label for="exampleCheck" class="form-check-label">Cash on Delivery</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning" id="next" disabled type="submit">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function termsChanged(checkbox) {
+        if (checkbox.checked){
+            document.getElementById("next").disabled = false;
+        }else{
+            document.getElementById("next").disabled = true;
+        }
+    }
+</script>
+
+<%- include('partials/footer') -%>
