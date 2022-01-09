@@ -42,12 +42,26 @@
                         </li>
                     </ul>
                 </div>
+                <%if(!req.isAuthenticated()){%>
                 <div class="col-lg-2">
                     <ul class="navbar-nav float-end">
                         <li class="nav-item"><a href="#" class="nav-link text-light signup">Sign Up</a></li>
                     </ul>
                 </div>
+                <%}%>
 
+                <%if(req.isAuthenticated()){%>
+                    <div class="px-1 col-2 col-lg-1">
+                        <div class="navbar-nav">
+                            <div class="nav-item">
+                                <a href="/cart" class="nav-link">
+                                    <i class="fas fa-shopping-cart" style="color: white;"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
             </div>
             <!-- <div class="px-1 col-2 col-lg-1">
                 <ul class="navbar-nav">
@@ -58,9 +72,15 @@
                     </li>
                 </ul>
             </div> -->
-            <a href="#" class="navbar-brand" data-bs-toggle="modal" data-bs-target="#sign-in">
-                <button class="btn" type="button" style="background-color: #318fb5;">Sign In</button>
+            <%if(req.isAuthenticated()){%>
+            <a href="/signout" class="navbar-brand" data-bs-toggle="modal" data-bs-target="#sign-in">
+                <button class="btn" type="button" style="background-color: #318fb5;">Sign Out</button>
             </a>
+            <%}else{%>
+                <a href="/signin" class="navbar-brand" data-bs-toggle="modal" data-bs-target="#sign-in">
+                    <button class="btn" type="button" style="background-color: #318fb5;">Sign In</button>
+                </a>
+            <%}%>
             <!-- <a href="#" class="navbar-brand"onclick="">
                 <button class="btn" type="button" style="background-color: #318fb5;">Sign Out</button>
             </a> -->

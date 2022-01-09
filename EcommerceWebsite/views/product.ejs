@@ -5,25 +5,24 @@
             <div class="col-0 col-lg-1">
 
             </div>
-
             <div class="col-6 col-lg-4 align-items center">
-                <img src="/images/image1.jpg" style="max-width: 300px;" alt="">
+                <img src=<%=item[0].imgUrl%> style="max-width: 300px;" alt="">
             </div>
             <div class="col-lg-1"></div>
             <div class="col-6 col-lg-4">
-                <form action="">
-                    <h2 class="text-info">Item title</h2>
-                    <p class="small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis ea, veniam possimus eum dolore repudiandae omnis praesentium tempora aliquid officiis voluptatum inventore consectetur asperiores deserunt vero accusantium harum cum!</p>
-                    <p class="h5">Price:  <span class="text-secondary">$34</span></p>
-                    <p><span class="font-weight-bold">Brand: </span>Johnson</p>
-                    <p><span class="font-weight-bold">Category: </span>Shampoo</p>
+                <form action="shipping" method="POST">
+                    <h2 class="text-info"><%=item[0].title%></h2>
+                    <p class="small"><%=item[0].description%></p>
+                    <p class="h5">Price:  <span class="text-secondary"><%=item[0].price%></span></p>
+                    <p><span class="font-weight-bold">Brand: </span><%=item[0].brand%></p>
+                    <p><span class="font-weight-bold">Category: </span><%=item[0].category%></p>
                     <br>
                     <div class="row">
                         <div class="col-2 mt-2">
                             <p class="text-secondary h6">Size</p>
                         </div>
                         <div class="col-2">
-                            <p class="lead">200ML</p>
+                            <p class="lead"><%=item[0].size%>ML</p>
                         </div>
                     </div>
                     <div class="row">
@@ -37,6 +36,10 @@
                         </div>
                     </div>
                     <div class="my-3">
+                        <input type="hidden" name="title" value=<%=item.title%>>
+                        <input type="hidden" name="img" value=<%=item.imgUrl%>>
+                        <input type="hidden" name="price" value=<%=item.price%>>
+                        <input type="hidden" name="size" value=<%=item.size%>>
                         <button type="submit" data-bs-toggle="" style="display: inline-block;" class="btn btn-dark">Add To Card</button>
                     </div>
                 </form>

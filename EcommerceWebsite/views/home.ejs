@@ -1,202 +1,254 @@
 <%- include('partials/header') -%>
-<div style="background-image: url(/images/BackgroundHome.jpg); background-size: cover; background-position: center; height: 38vh;background-repeat:no-repeat; margin: 0;">
-    <div class="row">
-        <h1 class="p-4">Welcome to the E-commerce website</h1>
-        <h6>Check out top quality items and exclusive offers</h6>
-    </div>
-
-</div>
-<div class="row text-center m-0 p-2 bg-light">
-    <div class="col-4">
-        <div class="p lead">Top Quality</div>
-    </div>
-    <div class="col-4">
-        <div class="p lead">Fast Delivery</div>
-    </div>
-    <div class="col-4">
-        <div class="p lead">Best Prices</div>
-    </div>
-</div>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha512-Ua/7Woz9L5O0cwB/aYexmgoaD7lw3dWe9FvXejVdgqu71gRog3oJgjSWQR55fwWx+WKuk8cl7UwA1RS6QCadFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2 class="heading-section mb-3 pb-md-4">Brands</h2>
-            <p class="lead mb-5">Check out our  various Brands</p>
+    <div
+        style="background-image: url(/images/BackgroundHome.jpg); background-size: cover; background-position: center; height: 38vh;background-repeat:no-repeat; margin: 0;">
+        <div class="row">
+            <h1 class="p-4">Welcome to the E-commerce website</h1>
+            <h6>Check out top quality items and exclusive offers</h6>
         </div>
 
-        <div class="col-md-12">
-            <div class="featured-carousel owl-carousel">
-                <div class="row"></div>
-                <%brandss.forEach(function(brand){%>
-                    
-                        <div class="col-4">
-                            <div class="item">
-                                <div class="work">
-                                    <form action="/products" method="POST">
-                                        <button type="submit" class="btn">
-                                            <div class="card text-center" style="width: 18rem;">
-                                                <img src=<%=brand.img%> alt="">
-                                            </div>
-                                            <div class="card-body">
-                                                <h6 class="card-text">
-                                                    <%= brand.brand %>
-                                                </h6>
-                                            </div>
-                                        </button>
-                                    </form>
+    </div>
+    <div class="row text-center m-0 p-2 bg-light">
+        <div class="col-4">
+            <div class="p lead">Top Quality</div>
+        </div>
+        <div class="col-4">
+            <div class="p lead">Fast Delivery</div>
+        </div>
+        <div class="col-4">
+            <div class="p lead">Best Prices</div>
+        </div>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha512-Ua/7Woz9L5O0cwB/aYexmgoaD7lw3dWe9FvXejVdgqu71gRog3oJgjSWQR55fwWx+WKuk8cl7UwA1RS6QCadFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="heading-section mb-3 pb-md-4">Brands</h2>
+                <p class="lead mb-5">Check out our various Brands</p>
+            </div>
+
+            <div class="col-md-12">
+                <div class="featured-carousel owl-carousel">
+                    <div class="row">
+                        <%brandss.forEach(function(brand){%>
+
+                            <div class="col-4">
+                                <div class="item">
+                                    <div class="work">
+                                        <form action="/productsBrands" method="POST">
+                                            <button type="submit" class="btn">
+                                                <div class="card text-center" style="width: 18rem;">
+                                                    <img src=<%=brand.img%> alt="">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h6 class="card-text">
+                                                        <%= brand.brand %>
+                                                    </h6>
+                                                </div>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                   
-                    
-                <% })%>
+                            <% })%>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br>
-<div class="container-fluid my-5">
-    <div class="row text-center">
-        <h2>Brands</h2>
-        <p class="lead text-secondary">Check out our brands</p>
-    </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>My Caption Title (1st Image)</h5>
-                        <p>The Whole caption will only show up if the screen is at least medium size</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/image2.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
-</div>
 
-
-
-
-<section class="bg-light text-center p-5">
     <div class="container-fluid">
         <div class="row text-muted text-center">
             <div class="col m-4">
-                <h1 class="display-4 mb-4">Best Seller</h1>
+                <div class="display-4 mb-4">Best Sellers</div>
+                <div class="underline-dark mb-4">
+
+                </div>
+                <p class="lead">Check out some of our Best Sellers Items</p>
             </div>
-            <p class="lead">Check out some of the best sellers items for 2022</p>
-        </div>    
+        </div>
+
+        <div class="row align-items-center text-center mx-auto">
+            <%best.forEach(function(bestseller){%>
+                <div class="col-lg-4 col-10 mx-auto">
+                    <div class="card card-1 text-dark my-4 mx-auto">
+                        <img src=<%=bestseller.img%>>
+                        <div class="card-body">
+                            <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">
+                                <%=bestseller.name%>
+                            </h5>
+                            <form method="POST" action="productOfBest">
+                                <input type="hidden" name="name" value=<%=bestseller.name%>>
+                                <%=console.log(bestseller.name)%>
+                                <button
+                                    class="btn p-2 text-uppercase font-weight-bold price-card-button btn-warning text-light"
+                                    type="submit">See Details</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+        </div>
     </div>
-    <div class="row align-items-center text-center mx-auto">
-        <div class="col-lg-4 col-10 mx-auto">
-            <div class="card card-1 text-dark my-4 mx-auto">
-                <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
-                <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
-                    <form action="">
-                        <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See details</button>
-                    </form>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="container-fluid my-5">
+        <div class="row text-center">
+            <h2>Brands</h2>
+            <p class="lead text-secondary">Check out our brands</p>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>My Caption Title (1st Image)</h5>
+                                <p>The Whole caption will only show up if the screen is at least medium size</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/image2.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+
+
+
+    <section class="bg-light text-center p-5">
+        <div class="container-fluid">
+            <div class="row text-muted text-center">
+                <div class="col m-4">
+                    <h1 class="display-4 mb-4">Best Seller</h1>
+                </div>
+                <p class="lead">Check out some of the best sellers items for 2022</p>
+            </div>
+        </div>
+        <div class="row align-items-center text-center mx-auto">
+            <div class="col-lg-4 col-10 mx-auto">
+                <div class="card card-1 text-dark my-4 mx-auto">
+                    <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
+                    <div class="card-body">
+                        <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
+                        <form action="">
+                            <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See
+                                details</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-10 mx-auto">
+                <div class="card card-1 text-dark my-4 mx-auto">
+                    <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
+                    <div class="card-body">
+                        <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
+                        <form action="">
+                            <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See
+                                details</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-10 mx-auto">
+                <div class="card card-1 text-dark my-4 mx-auto">
+                    <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
+                    <div class="card-body">
+                        <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
+                        <form action="">
+                            <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See
+                                details</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-10 mx-auto">
-            <div class="card card-1 text-dark my-4 mx-auto">
-                <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
-                <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
-                    <form action="">
-                        <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See details</button>
-                    </form>
+    </section>
+
+    <div class="container-fluid my-5">
+        <div class="row text-center">
+            <h2>Categories</h2>
+            <p class="lead text-secondary">Check out our Categories</p>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/image2.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-10 mx-auto">
-            <div class="card card-1 text-dark my-4 mx-auto">
-                <img src="/images/image1.jpg" style="max-height: 200px;width: 100%" alt="" class="mx-auto mb-2">
-                <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-3 card-list-item">Johnson Shampoo 400ML</h5>
-                    <form action="">
-                        <button class="btn p-2 price-card-button btn-warning text-light" type="submit">See details</button>
-                    </form>
-                </div>
-            </div>
+            <div class="col-2"></div>
         </div>
     </div>
-</section>
-
-<div class="container-fluid my-5">
-    <div class="row text-center">
-        <h2>Categories</h2>
-        <p class="lead text-secondary">Check out our Categories</p>
-    </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/image2.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/image1.jpg" style="max-height: 400px;" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
-</div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
-<%- include('partials/footer') -%>
+    <%- include('partials/footer') -%>
